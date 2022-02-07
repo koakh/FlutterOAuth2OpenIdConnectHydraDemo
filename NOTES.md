@@ -27,6 +27,13 @@ slim contrib cors AND put final optimized version in `HYDRA.md`
 - request a dummy api with protected route checked by hydra
 - try with oauthkeeper
 
+## Run Project
+
+```shell
+$ cd flutter_appauth/example
+$ flutter run
+```
+
 ## Configure for Ory Hydra Kuartzo Client
 
 `lib/main.dart`
@@ -68,6 +75,27 @@ slim contrib cors AND put final optimized version in `HYDRA.md`
     endSessionEndpoint: 'https://kuartzo.com:444/oauth2/sessions/logout',
   );
 ```
+
+## IOS Changes
+
+require to recongnize the url scheme
+
+```xml
+	<!-- seems that this is not needed
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.appauth.demo</string>
+			</array>
+		</dict>
+	</array> -->
+```
+
+> project was tested with this comment and url scheme works, strange, maybe it uses `PRODUCT_BUNDLE_IDENTIFIER = com.appauth.demo;` created when we upgrade project to flutter 2.0 with org with command `flutter create --org com.appauth --project-name demo .`, seems that this will do the trick
 
 ## Fix : Upgrading pre 1.12 Android projects
 
