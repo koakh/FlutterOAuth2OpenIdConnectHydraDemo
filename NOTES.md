@@ -27,6 +27,48 @@ slim contrib cors AND put final optimized version in `HYDRA.md`
 - request a dummy api with protected route checked by hydra
 - try with oauthkeeper
 
+## Configure for Ory Hydra Kuartzo Client
+
+`lib/main.dart`
+
+```dart
+  // For a list of client IDs, go to https://demo.identityserver.io
+  // final String _clientId = 'interactive.public';
+  // final String _redirectUrl = 'io.identityserver.demo:/oauthredirect';
+  // final String _issuer = 'https://demo.identityserver.io';
+  // final String _discoveryUrl =
+  //   'https://demo.identityserver.io/.well-known/openid-configuration';
+  // final String _postLogoutRedirectUrl = 'io.identityserver.demo:/';
+
+  // get hydra details from https://kuartzo.com:444/.well-known/openid-configuration
+  final String _clientId = 'oauth-pkce5';
+  final String _redirectUrl = 'com.appauth.demo://callback';
+  final String _issuer = 'https://kuartzo.com:444';
+  final String _discoveryUrl =
+      'https://kuartzo.com:444/.well-known/openid-configuration';
+  final String _postLogoutRedirectUrl = 'com.appauth.demo://endSession';
+
+  final List<String> _scopes = <String>[
+    'openid',
+    'profile',
+    'email',
+    'offline_access',
+    // dont uncomment this, will create the open/close phenomenum in ios
+    // 'api'
+  ];
+
+  final AuthorizationServiceConfiguration _serviceConfiguration =
+      const AuthorizationServiceConfiguration(
+    // authorizationEndpoint: 'https://demo.identityserver.io/connect/authorize',
+    // tokenEndpoint: 'https://demo.identityserver.io/connect/token',
+    // endSessionEndpoint: 'https://demo.identityserver.io/connect/endsession',
+
+    authorizationEndpoint: 'https://kuartzo.com:444/oauth2/auth',
+    tokenEndpoint: 'https://kuartzo.com:444/oauth2/token',
+    endSessionEndpoint: 'https://kuartzo.com:444/oauth2/sessions/logout',
+  );
+```
+
 ## Fix : Upgrading pre 1.12 Android projects
 
 - [Upgrading pre 1.12 Android projects · flutter/flutter Wiki](https://github.com/flutter/flutter/wiki/Upgrading-pre-1.12-Android-projects)
