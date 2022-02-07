@@ -366,7 +366,7 @@
 					"-framework",
 					"\"SafariServices\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.crossingthestreams.flutterAppauthExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flutter.flutterAppauthExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -500,7 +500,7 @@
 					"-framework",
 					"\"SafariServices\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.crossingthestreams.flutterAppauthExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flutter.flutterAppauthExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -534,7 +534,7 @@
 					"-framework",
 					"\"SafariServices\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = io.crossingthestreams.flutterAppauthExample;
+				PRODUCT_BUNDLE_IDENTIFIER = com.flutter.flutterAppauthExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
