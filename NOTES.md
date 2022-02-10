@@ -13,6 +13,10 @@ $ cd flutter_appauth/example
 $ flutter run
 ```
 
+## Notes
+
+PRODUCT_BUNDLE_IDENTIFIER = com.flutter.flutterAppauthExample;
+
 ## TODO
 
 finish `HYDRA.md` notes and create a NEW FINAL pkce client for web, android and ios to double check that it works
@@ -229,3 +233,35 @@ E/AndroidRuntime(25619): java.lang.RuntimeException: Unable to instantiate appli
 ```
 
 the solution is using `android.app.Application` ex `manifestPlaceholders = [applicationName: "android.app.Application"]`, and not `com.appauth.demo` or `com.appauth.demo.MainActivity`
+
+## Fix: [ ERROR] Could not determine bundle id.
+
+```shell
+Debug-iphoneos/Runner.app is not a valid path to an executable file. Please rebuild the project to ensure that all required executables are created. Check your project settings to ensure that a valid executable will be built.
+```
+
+```
+2022-02-10 11:34:23.071 ios-deploy[2341:24278] [ !! ] [ ERROR] Could not determine bundle id.
+Could not run build/ios/iphoneos/Runner.app on b546d38319b702e0fea0ed18e478f8280d870156.
+Try launching Xcode and selecting "Product > Run" to fix the problem:
+  open ios/Runner.xcworkspace
+  ```
+
+fix for me was delete `/Users/mario/Library/Developer/Xcode/DerivedData`
+
+```shell
+$ rm -r /Users/mario/Library/Developer/Xcode/DerivedData
+# now it works
+$ flutter run
+```
+
+but next build error appears again.....fuck
+
+```shell
+$ mv ios ios_
+# must create with this command to have org namespace
+$ flutter create --org com.appauth --project-name demo .
+$ flutter run
+```
+
+now it works, this annoying problems are solved
