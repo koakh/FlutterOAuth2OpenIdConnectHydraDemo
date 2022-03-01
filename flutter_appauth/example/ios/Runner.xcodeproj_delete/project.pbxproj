@@ -294,11 +294,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.flutter.flutterAppauthExample;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.appauth.demo;
->>>>>>> 7b789783e4a24dd3e3c4de3dbda76f8c2a2ae4e4
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
@@ -426,11 +422,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.flutter.flutterAppauthExample;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.appauth.demo;
->>>>>>> 7b789783e4a24dd3e3c4de3dbda76f8c2a2ae4e4
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -452,11 +444,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-<<<<<<< HEAD
-				PRODUCT_BUNDLE_IDENTIFIER = com.flutter.flutterAppauthExample;
-=======
 				PRODUCT_BUNDLE_IDENTIFIER = com.appauth.demo;
->>>>>>> 7b789783e4a24dd3e3c4de3dbda76f8c2a2ae4e4
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Runner/Runner-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

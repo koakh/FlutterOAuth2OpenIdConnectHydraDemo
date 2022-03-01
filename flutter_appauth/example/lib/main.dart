@@ -52,7 +52,7 @@ class _MyAppState extends State<MyApp> {
     'profile',
     'email',
     'offline_access',
-    // dont uncomment this, will create the open/close phenomenum in ios
+    // don't uncomment this, it will create the open/close phenomena in ios
     // 'api'
   ];
 
