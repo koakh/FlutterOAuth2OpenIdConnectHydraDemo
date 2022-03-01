@@ -15,3 +15,5 @@ pubspec.lock
 doc/api/
 
 .bak
+.DS_Store
+flutter_appauth/.DS_Store
